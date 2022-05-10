@@ -1,0 +1,45 @@
+<section class="content" id="about">
+    <div class="block-content">
+        <h3 class="block-title">Perfil</h3>
+        <h3 class="subheading">Hola, soy {{cv.datos.nombre}} <strong>{{cv.datos.especialidad}}</strong></h3>
+        <p>•Obejetivo: {{cv.datos.objetivo}}</p>
+        <div class="info-list row">
+            <div class="col-sm-6"><span>Nombre : </span> {{cv.datos.nombre}}</div>            
+            <div class="col-sm-6"><span>Email : </span> {{cv.datos.mail}}</div>            
+            <div class="col-sm-6"><span>Interes : </span> {{cv.datos.interes}}</div>
+            <div class="col-sm-6"><span>Disponibilidad : </span> {{cv.datos.disponibilidad}}</div>
+        </div>
+    </div>
+    
+           
+    <div class="block-content">
+        <div>
+
+        <h3 class="block-title">Testimonios</h3>
+        
+        
+            <div class="row">
+            
+                <div id="liontestimonial" class="owl-carousel owl-theme">
+                    <div *ngFor="let dato of cv.testimonio">
+                    <div class="item testimonials">
+                    
+                    <img src="assets\images\testimonials\1.jpeg" alt="">
+                    
+                    <blockquote>{{dato.descripcion}}
+                        <p class="quote"><span>{{dato.nombre}}</span> {{dato.cargo}}</p>
+                    </blockquote>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        
+       </div> 
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-12 btn-email">
+            <a class="btn lowercase">rosananeiman77@gmail.com</a>
+        </div>
+    </div>
+</section>
