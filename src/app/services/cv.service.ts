@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CVService {
+  personal: any[] = [];
   datos: any;
   profesional: any[] = [];
   educacion: any[] = [];
@@ -19,13 +21,31 @@ export class CVService {
     this.CargarExperiencia();
     this.CargarServicios();
     this.CargarTestimonio();
-    
+    this.CargarEducacion();
+        
   }
   
+  private obtenerDatos() {
+    this.http.get('/assets/json/datos.json')
+    .subscribe((res:any) => {
+      this.personal = res;
+      console.log(res);
+    } )
+  }
+
+
   private CargarDatos(){
-    this.http.get('./assets/json/datos.json')
+    this.http.get('../assets/json/datos.json')            
     .subscribe((respu: any) => {
       this.datos = respu;
+      console.log(respu);
+    });
+  }
+
+  private CargarEducacion(){
+    this.http.get('https://cv-tutorial-8168f-default-rtdb.firebaseio.com/Educacion.json')
+    .subscribe((respu: any) => {
+      this.educacion = respu;
       console.log(respu);
     });
   }

@@ -7,10 +7,11 @@ import { CVService } from '../services/cv.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+   
   constructor(public cv: CVService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

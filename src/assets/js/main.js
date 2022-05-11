@@ -22,7 +22,7 @@
         });
 
         $('#liontextslider').owlCarousel({
-            nav: false,
+            nav: true,
             items: 1,
             navSpeed: 400,
             loop: true,
@@ -46,7 +46,7 @@
         });
     });
 
-    $('.portfolio-block, .menu-item').on('click', function() {
+    $(document).on('click','.portfolio-block, .menu-item', function() {
 
         //Portfolio masonry
         var $container = $('#portfolio-container');
