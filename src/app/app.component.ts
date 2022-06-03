@@ -11,5 +11,8 @@ export class AppComponent {
   constructor(public cv: CVService) { }
   ngOnInit(): void {
   }
-  
+
+  iniSesion() {
+    return 2;
+  }
 }

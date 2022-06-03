@@ -1,0 +1,25 @@
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo Electronico</th>
+        <th scope="col">Mensaje</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mensaje of cv.formulario">
+        <th scope="row">{{mensaje.id}}</th>
+        <td>{{mensaje.nombre}}</td>
+        <td>{{mensaje.mail}}</td>
+        <td>{{mensaje.mensaje}}</td>
+        <td><button type="button" class="btn btn-danger">Borrar</button>
+            <button type="button" class="btn btn-danger">Enviar mensaje</button> </td>
+      </tr>
+    </tbody>
+  </table>
+  
+ 
+  <a target="_blank" href="/porfolio" class="btn btn-download">Porfolio</a>

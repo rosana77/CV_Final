@@ -69,6 +69,7 @@
           "configurations": {
             "production": {
               "browserTarget": "ej2:build:production"
+              
             },
             "development": {
               "browserTarget": "ej2:build:development"

@@ -101,6 +101,10 @@
         $('.content-blocks.pop section').load(postUrl);
         return false;
     });
+     /*/On Click inicio sesion
+    $(document).on('click', '.btn btn-download ',function() {
+    return <app-inicio></app-inicio>
+    });*/
 
     //On Click Open Menu Items
     $(document).on('click', '.menu-block, .menu-item',function() {
@@ -138,7 +142,7 @@
         $('.menu-item').removeClass('active');
         $('.menu-item.contact').addClass('active');
     });
-
+    
     //On Click Close Blocks
     $(document).on('click','#close', function() {
         $('.name-block').removeClass('reverse');

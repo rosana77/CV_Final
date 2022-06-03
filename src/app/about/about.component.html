@@ -1,13 +1,15 @@
 <section class="content" id="about">
     <div class="block-content">
         <h3 class="block-title">Perfil</h3>
-        <h3 class="subheading">Hola, soy <strong>{{cv.datos?.nombre}}</strong><br>{{cv.datos?.especialidad}}</h3>
-        <p>Siendo mi Objetivo {{cv.datos?.objetivo}}</p>
+        <div *ngFor="let dat of cv.datos">
+        <h3 class="subheading">Hola, soy <strong> {{dat.nombre}}</strong><br>{{dat.especialidad}}</h3>
+        <p>Siendo mi Objetivo {{dat.objetivo}}</p>
         <div class="info-list row">
-            <div class="col-sm-6"><span>Nombre : </span> {{cv.datos?.nombre}}</div>            
-            <div class="col-sm-6"><span>Email : </span> {{cv.datos?.mail}}</div>            
-            <div class="col-sm-6"><span>Interes : </span> {{cv.datos?.interes}}</div>
-            <div class="col-sm-6"><span>Disponibilidad : </span> {{cv.datos?.disponibilidad}}</div>
+            <div class="col-sm-6"><span>Nombre : </span> {{dat.nombre}}</div>            
+            <div class="col-sm-6"><span>Email : </span> {{dat.mail}}</div>            
+            <div class="col-sm-6"><span>Interes : </span> {{dat.interes}}</div>
+            <div class="col-sm-6"><span>Disponibilidad : </span> {{dat.disponibilidad}}</div>
+        </div>
         </div>
     </div> 
     
